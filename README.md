@@ -1,0 +1,3 @@
+# Cross-arch compilation with Swift Macros
+
+After introducing [Swift Macros](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros/) to the [Tuist](https://github.com/tuist/tuist) package, we noticed that our release script broke. The script uses `swift build` to build the package with the `--triple` flag to compile it for different architectures, and then uses `lipo` to merge the binaries into a universal one. 
